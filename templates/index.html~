@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Home Informer</title>
+
+    <!-- Le styles -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            max-width: 1500px;
+            padding: 19px 29px 29px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        }
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+        .form-signin input[type="text"],
+        .form-signin input[type="password"] {
+            font-size: 16px;
+            height: auto;
+            margin-bottom: 15px;
+            padding: 7px 9px;
+        }
+
+    </style>
+    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" style="width:40%">
+    <table>
+        <tr width="80%">
+	  <td>
+        <form class="form-signin" id="deploy-form" action='/task' method="post">
+            <legend>Weather</legend>
+            <p><b>{{ weather[0] }}</b> <br /> {{ weather[1] }} <br /> {{ weather[2] }} <br /> {{ weather[3] }} <br /> {{ weather[4] }}</p>
+
+            <!-- <button class="btn btn-large btn-primary" type="submit" style="width:50%">Deploy  </button> -->
+        </form>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+        <form class="form-signin" id="test" action='/task' method="post">
+            <legend>Trains</legend>
+            <p>{{ tripData[0] }} <br /> {{ tripData[1] }} <br /> {{ tripData[2] }} <br /> {{ tripData[3] }} <br /> {{ tripData[4] }} <br /> {{ tripData[5] }} <br /> {{ tripData[6] }} <br /> {{ tripData[7]  }}</p>
+
+            <!-- <button class="btn btn-large btn-primary" type="submit" style="width:50%">Deploy  </button> -->
+        </form>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+        <form class="form-signin" id="test" action='/task' method="post">
+            <legend>Calendar events</legend>
+            <p>{{ myEvents[0] }} <br /> {{ myEvents[1] }} <br /> {{ myEvents[2] }} <br /></p>
+
+            <!-- <button class="btn btn-large btn-primary" type="submit" style="width:50%">Deploy  </button> -->
+        </form>
+	  </td>
+	</tr>
+</div> <!-- /container -->
+
+
+
+</table>
